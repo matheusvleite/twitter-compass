@@ -1,5 +1,8 @@
-
-
-.container {
-    display: flex;
+:root {
+    --black: #0F1419;
+    --dark5: #5B7083;
+    --font-main: 'Poppins', sans-serif;
+    --primary-blue: #1DA1F2;
+    --white: #FFFFFF;
 }
+

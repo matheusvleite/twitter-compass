@@ -3,45 +3,49 @@ import profileImg from '../img/profile-img.png'
 
 export function sideMenu(): string {
     return `
+    <div class="content">
         <nav class="menu__side">
             <ul class"menu__side-list>
                 <li class="side__list-item">
                     <img src="${twitterLogo}" alt="TwitterLogo" class="logo-img"/>
                 </li>
-                <li class="side__list-item">
-                    <i class="fa-solid fa-house-user"></i><a href="#">Home</a>
+                <li class="side__list-item active">
+                    <i class="fa-solid fa-house-user"></i><a href="#" class="side__list-item-link active">Home</a>
                 </li>
                 <li class="side__list-item">
-                    <i class="fa-regular fa-hashtag"></i><a href="/not-found.html">Explore</a>
+                    <i class="fa-regular fa-hashtag"></i><a href="/not-found.html" class="side__list-item-link">Explore</a>
                 </li>
                 <li class="side__list-item">
-                    <i class="fa-regular fa-bell"></i><a href="/not-found.html">Notifications</a>
+                    <i class="fa-regular fa-bell"></i><a href="/not-found.html" class="side__list-item-link">Notifications</a>
                 </li>
                 <li class="side__list-item">
-                    <i class="fa-regular fa-envelope"></i><a href="/not-found.html">Messages</a> 
+                    <i class="fa-regular fa-envelope"></i><a href="/not-found.html" class="side__list-item-link">Messages</a> 
                 </li>
                 <li class="side__list-item">
-                    <i class="fa-regular fa-bookmark"></i><a href="/not-found.html">Bookmarks</a> 
+                    <i class="fa-regular fa-bookmark"></i><a href="/not-found.html" class="side__list-item-link">Bookmarks</a> 
                 </li>
                 <li class="side__list-item">
-                    <i class="fa-solid fa-bars-staggered"></i><a href="/not-found.html">Lists</a>
+                    <i class="fa-solid fa-bars-staggered"></i><a href="/not-found.html" class="side__list-item-link">Lists</a>
                 </li>
                 <li class="side__list-item">
-                    <i class="fa-regular fa-user"></i><a href="/not-found.html">Profile</a> 
+                    <i class="fa-regular fa-user"></i><a href="/not-found.html" class="side__list-item-link">Profile</a> 
                 </li>
                 <li class="side__list-item">
-                    <i class="fa-solid fa-comment-dots"></i><a href="/not-found.html">More</a>
+                    <i class="fa-solid fa-comment-dots"></i><a href="/not-found.html" class="side__list-item-link">More</a>
                 </li>
+                <li class="side__list-item">
                 <button class="menu__side-btn">Tweet</button>
+                </li>
                 <div class="menu__side-profile">
                     <img src="${profileImg}" alt="Profile" class="profile-img" />
                     <div class="profile-socials">
-                        <h2>Matheus Victor</h2>
-                        <span>@matheusvictor</span>
+                        <h3 class="profile-socials-name">Matheus Victor</h3>
+                        <span class="profile-socials-twitter">@mvictor</span>
                     </div>
                     <i class="fa-solid fa-ellipsis"></i>
                 </div>
             </ul>
         </nav>
+    </div>    
     `
 }

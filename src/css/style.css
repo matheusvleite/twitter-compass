@@ -1,3 +1,18 @@
 @import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 @import './base.css';
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+@import './components/sideBar.css';
+
+
+
+html, body {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--black);
+    font-family: var(--font-main);
+}
+
+.container {
+    display: flex;
+}
