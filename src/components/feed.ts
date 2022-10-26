@@ -7,9 +7,11 @@ export function feed(): string {
             <i class="fa-regular fa-star"></i>
         </div>
         <form id="form-tweet">
+            <div class="form-area">
             <img src="${profileImg}" alt="Profile" class="feed-img" />
-            <textarea name="Tweet" id="Tweet" class="tweet" 
-            placeholder="What’s happening?" maxlength="380"></textarea>
+            <textarea name="Tweet" id="Tweet" class="tweet-area" 
+            placeholder="What’s happening?"  rows="3" cols="30" maxlength="380"></textarea>
+            </div>
             <div class="feed__post">
                 <i class="fa-regular fa-image"></i>
                 <i class="fa-solid fa-camera"></i>
@@ -19,7 +21,6 @@ export function feed(): string {
                 <button class="feed__post-btn">Tweet</button>
             </div>
         </form>
-        
     </div>
     `
 }
