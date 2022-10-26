@@ -6,9 +6,11 @@ import { feedNews } from './components/feed-news.js';
 
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-    ${sideMenu()}
-    ${feed()}
-    ${feedNews()}
+    <div class="container">
+        ${sideMenu()}
+        ${feed()}
+        ${feedNews()}
+    </div>
 `
 postTweet(document.querySelector<HTMLButtonElement>('#form-tweet')!);
 
