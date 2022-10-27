@@ -15,7 +15,8 @@ export function feed(): string {
                 </div>
                 <div class="feed__post">
                     <div class="feed__post-icons">
-                        <i class="fa-regular fa-image fa-lg" role="button"></i>
+                        <label for="file-image"><i class="fa-regular fa-image fa-lg" role="button"></i></label>
+                        <input type="file" id="file-image" style="display:none">
                         <i class="fa-solid fa-camera fa-lg" role="button"></i>
                         <i class="fa-solid fa-square-poll-horizontal fa-lg" role="button"></i>
                         <i class="fa-regular fa-face-smile fa-lg" role="button"></i>

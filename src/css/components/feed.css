@@ -50,6 +50,7 @@
     display: flex;
     gap: .5rem;
     margin-left: 3.5rem;
+    align-items: center;
 }
 
 .feed__post-btn {
