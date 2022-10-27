@@ -5,3 +5,9 @@ export function postTweet(element: HTMLButtonElement) {
         alert('ola');
     })
 }
+
+export function focusTweet(button: HTMLButtonElement, element: HTMLInputElement) {
+    button.addEventListener('click', () => {
+        element.focus();
+    })
+}

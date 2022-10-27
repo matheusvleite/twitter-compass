@@ -10,7 +10,7 @@ export function feed(): string {
             <form id="form-tweet">
                 <div class="form-area">
                 <img src="${profileImg}" alt="Profile" class="feed-img" />
-                <textarea name="Tweet" id="Tweet" class="tweet-area" 
+                <textarea name="Tweet" id="tweet" class="tweet-area" 
                 placeholder="What’s happening?"  rows="2" cols="30" maxlength="380"></textarea>
                 </div>
                 <div class="feed__post">
