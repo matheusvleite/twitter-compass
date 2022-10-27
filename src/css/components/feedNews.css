@@ -1,0 +1,126 @@
+.feed__news-search {
+    width: 348px;
+    height: 39px;
+    background-color: var(--dark7);
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    color: var(--dark5);
+    box-sizing: border-box;
+}
+
+.feed__news-search-input {
+    margin-left: .5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: var(--font-main);
+}
+
+.feed__news-notice,
+.feed__news-follow {
+    width: 350px;
+    background-color: var(--dark8);
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+
+.feed__news-notice-title {
+    font-size: 20px;
+    padding: 1rem 1rem;
+}
+
+.feed__news-card {
+    margin-bottom: 1rem;
+    border-top: 1px solid var(--dark7);
+}
+
+.feed__news-card-content,
+.feed__news-card-follow-content {
+    padding: 0 1rem;
+    margin-top: .5rem;
+}
+
+.feed__news-descript {
+    font-size: 14px;
+    color: var(--dark5);
+    font-weight: 500;
+}
+
+.feed__news-notice-area {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}    
+
+.feed__news-area-title {
+    font-size: 15px;
+}
+
+.feed__news-area-img {
+    border-radius: 15px;
+}
+
+.feed__news-thrend {
+    text-decoration: none;
+    color: var(--primary-blue);
+}
+
+.feed__news-more {
+    border-top: 1px solid var(--dark7);
+    padding: 1rem;
+}
+
+.feed__news-showmore {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+.feed__news-card-follow {
+    margin-bottom: 1rem;
+    border-top: 1px solid var(--dark7);
+}
+
+.feed__news-follow-area {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.feed__news-follow-img {
+    border-radius: 50%;
+}
+
+.feed__news-content-text {
+    width: 200px;
+}
+
+.feed__news-card-twitter {
+    color: var(--dark5);
+    font-weight: 500;
+}
+
+.feed__news-follow-btn {
+    background-color: transparent;
+    border-radius: 99px;
+    border: 2px solid var(--primary-blue);
+    width: 80px;
+    height: 30px;
+    color: var(--primary-blue);
+    font-weight: 500;
+    font-family: var(--font-main);
+    cursor: pointer;
+}
+
+.feed__news-term {
+    width: 350px;
+}
+
+.feed__news-term {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--dark5);
+}
