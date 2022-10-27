@@ -6,7 +6,7 @@ import { feedNews } from './components/feed-news.js';
 
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-    <div class="container">
+    <div class="container container-xl">
         ${sideMenu()}
         ${feed()}
         ${feedNews()}

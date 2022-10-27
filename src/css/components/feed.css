@@ -1,6 +1,19 @@
+.feed__content {
+    border: 1px solid var(--dark7);
+    height: 100vh;
+    min-width: 600px;
+}
+
 .feed__title {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid var(--dark7);
+    padding: 1rem;
+}
+
+#form-tweet {
+    border-bottom: 1px solid var(--dark7);
+    padding: 1rem;
 }
 
 .form-area {
@@ -10,6 +23,7 @@
 .feed-img {
     width: 48px;
     height: 48px;
+    border-radius: 50%;
 }
 
 .tweet-area {
@@ -27,6 +41,15 @@
 
 .feed__post {
     color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.feed__post-icons {
+    display: flex;
+    gap: .5rem;
+    margin-left: 3.5rem;
 }
 
 .feed__post-btn {
@@ -36,6 +59,7 @@
     opacity: 0.5;
     color: var(--white);
     font-weight: 700;
-    padding: 1rem 2rem;
     cursor: pointer;
+    width: 77px;
+    height: 39px;
 }

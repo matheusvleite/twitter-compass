@@ -1,20 +1,9 @@
 @import './reset.css';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css');
 @import './base.css';
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
 @import './components/sideBar.css';
 @import './components/feed.css';
 @import './components/feedNews.css';
 
-
-
-html, body {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--black);
-    font-family: var(--font-main);
-}
-
-.container {
-    display: flex;
-}
