@@ -50,7 +50,7 @@ export function sideMenu(): string {
                         <h3 class="profile-socials-name">Matheus Victor</h3>
                         <span class="profile-socials-twitter">@mvictor</span>
                     </div>
-                    <i class="fa-solid fa-ellipsis"></i>
+                    <i class="fa-solid fa-ellipsis" role="button"></i>
                 </div>
             </ul>
         </nav>

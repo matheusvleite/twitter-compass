@@ -1,7 +1,7 @@
 .feed__content {
     border: 1px solid var(--dark7);
     height: 100vh;
-    min-width: 600px;
+    width: 600px;
 }
 
 .feed__title {
