@@ -25,6 +25,8 @@ export function feed(): string {
                     <button class="feed__post-btn">Tweet</button>
                 </div>
             </form>
+            <div id="view">
+            </div>
         </div>  
     </div>
     `
