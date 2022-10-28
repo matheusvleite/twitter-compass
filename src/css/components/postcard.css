@@ -1,0 +1,54 @@
+.tweet__card {
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #e6ecf0;
+    border-top: 1px solid #e6ecf0;
+}
+
+.tweet__header {
+    display: flex;
+    align-items: flex-start;
+    font-size: 15px;
+}
+
+.tweet__header-id {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.tweet__descrpt {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: .3rem;
+}
+
+.tweet__header-info {
+    margin-left: .8rem;
+
+}
+
+.tweet-img {
+    max-width: 509px;
+    height: 278px;
+    border-radius: 20px;
+}
+
+.tweet__header-img {
+    padding: 1.5rem;
+}
+
+.tweet__info-counts {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.tweet__info-content {
+    display: flex;
+    margin-right: 20px;
+}
+
+.count {
+    margin-left: .3rem;
+}
