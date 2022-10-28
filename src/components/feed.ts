@@ -1,4 +1,5 @@
 import profileImg from '../img/profile-img.png'
+
 export function feed(): string {
     return `
     <div class="content">
@@ -7,9 +8,9 @@ export function feed(): string {
                 <h1 class="feed__title-text">Home</h1> 
                 <i class="fa-regular fa-star fa-lg active" role="button"></i>
             </div>
-            <form id="form-tweet">
+            <form id="form-tweet" method="post">
                 <div class="form-area">
-                <img src="${profileImg}" alt="Profile" class="feed-img" />
+                <img src="${profileImg}" alt="Profile" class="feed-img">
                 <textarea name="Tweet" id="tweet" class="tweet-area" 
                 placeholder="What’s happening?"  rows="2" cols="30" maxlength="380"></textarea>
                 </div>

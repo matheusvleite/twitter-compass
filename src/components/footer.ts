@@ -1,4 +1,4 @@
-export function footer() {
+export function footerNav(): string {
     return `
         <div class="footer__bar fixed-bottom">
             <div class="footer__content">
