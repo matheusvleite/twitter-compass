@@ -64,3 +64,10 @@
     width: 77px;
     height: 39px;
 }
+
+/* UTILITIES */
+
+#view {
+    height: 73vh;
+    overflow-y: scroll;
+}
