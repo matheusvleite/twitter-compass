@@ -32,22 +32,34 @@ interface post {
     url: string
 }
 
-let postContent: post[] = [];
+let postContent: post[] = [] = JSON.parse(getLocal()!) || [];
 
 // FUNCTIONS
+
+function getLocal() {
+    return localStorage.getItem('localDb');
+}
+
+function updateLocalStorage() {
+    localStorage.setItem('localDb', JSON.stringify(postContent));
+}
 
 function save(text: string, date: Date, url: string) {
     postContent.push({text, date, url})
     
     view(postContent);
 
-    update()
+    update();
+
+    updateLocalStorage();
 }
 
+update();
+
 function update() {
-    let teste = view(postContent)
+    let template = view(postContent)
     
-    viewFeed.innerHTML = teste;
+    viewFeed.innerHTML = template;
 }
 
 
@@ -60,8 +72,7 @@ function view(postContent: post[]) {
             <img src="/src/img/profile-img.png" alt="" class="feed-img">
             <div class="tweet__header-info">
                 <span>Matheus Victor</span> <span class="tweet__header-id">@mvictor</span><span class="tweet__header-id"> ${item.date}</span>
-            <p class="tweet__descrpt">${item.text}</p>
-            
+            <p class="tweet__descrpt">${item.text}</p>  
         </div>
         </div>
         <div class="tweet__header-img">
@@ -69,21 +80,21 @@ function view(postContent: post[]) {
         </div>
         <div class="tweet__info-counts">
             <div class="tweet__info-content">
-            <i class="fa-regular fa-comment"></i>
+            <i class="fa-regular fa-comment" role="button"></i>
             <div class="count">33</div>
         </div>
         <div class="tweet__info-content">
-            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-retweet" role="button"></i>
             <div class="count">397</div>
         </div>
         <div class="tweet__info-content">
-            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-heart" role="button"></i>
             <div class="count">
             2.6k
             </div>
         </div>
         <div class="tweet__info-content">
-            <i class="fa-regular fa-folder"></i>
+            <i class="fa-regular fa-folder" role="button"></i>
             <div class="count">
             2.6k
             </div>
