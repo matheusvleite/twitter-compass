@@ -68,6 +68,19 @@
 /* UTILITIES */
 
 #view {
-    height: 73vh;
+    height: 72vh;
     overflow-y: scroll;
+}
+
+#view::-webkit-scrollbar {
+    width: 13px;
+}
+
+#view::-webkit-scrollbar-track {
+    background: var(--white);
+}
+
+#view::-webkit-scrollbar-thumb {
+    background: var(--dark7);
+    border-radius: 100px;
 }

@@ -3,6 +3,8 @@ import { sideMenu } from './components/side-menu.js';
 import './css/style.css';
 import { feedNews } from './components/feed-news.js';
 import { footerNav } from './components/footer.js';
+import { view } from './components/view.js';
+import { post } from './components/interfaces/post.js';
 
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -25,12 +27,6 @@ const viewFeed = document.querySelector<HTMLDivElement>('#view')!;
 // VARIABLES
 
 const CLIENT_ID: string = '4ce2a6c0ddba9b6';
-
-interface post {
-    text: string,
-    date: Date,
-    url: string
-}
 
 let postContent: post[] = [] = JSON.parse(getLocal()!) || [];
 
@@ -62,52 +58,6 @@ function update() {
     viewFeed.innerHTML = template;
 }
 
-
-
-function view(postContent: post[]) {
-    return postContent.map(item => {
-        return  `
-        <div class="tweet__card">
-        <div class="tweet__header">
-            <img src="/src/img/profile-img.png" alt="" class="feed-img">
-            <div class="tweet__header-info">
-                <span>Matheus Victor</span> <span class="tweet__header-id">@mvictor</span><span class="tweet__header-id"> ${item.date}</span>
-            <p class="tweet__descrpt">${item.text}</p>  
-        </div>
-        </div>
-        <div class="tweet__header-img">
-            <img src="${item.url}" alt="Tweet Img" class="tweet-img">
-        </div>
-        <div class="tweet__info-counts">
-            <div class="tweet__info-content">
-            <i class="fa-regular fa-comment" role="button"></i>
-            <div class="count">33</div>
-        </div>
-        <div class="tweet__info-content">
-            <i class="fa-solid fa-retweet" role="button"></i>
-            <div class="count">397</div>
-        </div>
-        <div class="tweet__info-content">
-            <i class="fa-regular fa-heart" role="button"></i>
-            <div class="count">
-            2.6k
-            </div>
-        </div>
-        <div class="tweet__info-content">
-            <i class="fa-regular fa-folder" role="button"></i>
-            <div class="count">
-            2.6k
-            </div>
-        </div>
-        </div>
-        </div>
-        `
-    }).join('')
-
-
-}
-
-
 function clearForm() { // CLEAR FORM
     textArea.value = '';
     fileArea.value = '';
@@ -125,11 +75,11 @@ form.addEventListener('submit', (e) => { // SUBMIT FORM
     data.append('image', fileArea.files[0]);
 
     fetch('https://api.imgur.com/3/image', { // API UPLOAD IMAGE
-        method: 'post',
-        body: data,
+        method: 'POST',
         headers: {
             'Authorization': `Client-ID ${CLIENT_ID}`
-        }
+        },
+        body: data
     })
         .then(data => data.json())
         .then(data => save(textAreaValue, datePost,data.data.link)); // PASSING PARAMETERS FOR FUNCTION VIEW
