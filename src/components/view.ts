@@ -2,6 +2,15 @@ import { post } from "./interfaces/post"
 
 export function view(postContent: post[]) {
     return postContent.map(item => {
+
+        postContent.sort(function (a, b) {  // SORTING POSTS BY MOST RECENT TIME
+            if(a.date > b.date){
+                return -1
+            }else {
+                return 1;
+            }
+        })
+
         return  `
         <div class="tweet__card">
         <div class="tweet__header">
