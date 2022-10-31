@@ -40,7 +40,7 @@ function updateLocalStorage() {
     localStorage.setItem('localDb', JSON.stringify(postContent));
 }
 
-function save(text: string, date: Date, url: string) {
+function save(text: string, date: Date , url: string) {
     postContent.push({text, date, url})
     
     view(postContent);
@@ -82,7 +82,7 @@ form.addEventListener('submit', (e) => { // SUBMIT FORM
         body: data
     })
         .then(data => data.json())
-        .then(data => save(textAreaValue, datePost,data.data.link)); // PASSING PARAMETERS FOR FUNCTION VIEW
+        .then(data => save(textAreaValue, datePost, data.data.link)); // PASSING PARAMETERS FOR FUNCTION VIEW
         clearForm(); // CLEAR FORM
         
 })

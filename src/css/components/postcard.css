@@ -29,7 +29,7 @@
 }
 
 .tweet-img {
-    max-width: 509px;
+    width: 509px;
     height: 278px;
     border-radius: 20px;
 }

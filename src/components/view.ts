@@ -3,13 +3,21 @@ import { post } from "./interfaces/post"
 export function view(postContent: post[]) {
     return postContent.map(item => {
 
+        let imgSource = `
+        <img src=${item.url} class="tweet-img" referrerpolicy="no-referrer">
+        `;
+        let imgSrcRender = '';
+        if(item.url != null) {
+            imgSrcRender = imgSource;
+        };
+
         postContent.sort(function (a, b) {  // SORTING POSTS BY MOST RECENT TIME
             if(a.date > b.date){
                 return -1
             }else {
                 return 1;
             }
-        })
+        });
 
         return  `
         <div class="tweet__card">
@@ -17,12 +25,16 @@ export function view(postContent: post[]) {
             <img src="/src/img/profile-img.png" alt="" class="feed-img">
             <div class="tweet__header-info">
                 <span>Matheus Victor</span> <span class="tweet__header-id">@mvictor</span>
-                <span class="tweet__header-id"> ${item.date}</span>
-            <p class="tweet__descrpt">${item.text}</p>  
+                <span class="tweet__header-id"> 
+                ${ item.date }
+                </span>
+                <p class="tweet__descrpt">
+                ${item.text}
+                </p>  
         </div>
         </div>
         <div class="tweet__header-img">
-            <img src="${item.url}" class="tweet-img" referrerpolicy="no-referrer">
+            ${imgSrcRender}
         </div>
         <div class="tweet__info-counts">
             <div class="tweet__info-content">
