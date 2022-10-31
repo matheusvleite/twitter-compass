@@ -6,7 +6,7 @@ export function feed(): string {
         <div class="feed__content">   
             <div class="feed__title">
                 <h1 class="feed__title-text">Home</h1> 
-                <i class="fa-regular fa-star fa-lg active" role="button"></i>
+                <i class="fa-solid fa-wand-magic-sparkles" role="button"></i>
             </div>
             <form id="form-tweet" method="post">
                 <div class="form-area">
