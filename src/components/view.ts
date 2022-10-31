@@ -1,4 +1,7 @@
-import { post } from "./interfaces/post"
+import { post } from "./interfaces/post";
+import moment from 'moment'; // API MOMENT JS
+
+
 
 export function view(postContent: post[]) {
     return postContent.map(item => {
@@ -9,7 +12,7 @@ export function view(postContent: post[]) {
         let imgSrcRender = '';
         if(item.url != null) {
             imgSrcRender = imgSource;
-        };
+        }; 
 
         postContent.sort(function (a, b) {  // SORTING POSTS BY MOST RECENT TIME
             if(a.date > b.date){
@@ -26,35 +29,39 @@ export function view(postContent: post[]) {
             <div class="tweet__header-info">
                 <span>Matheus Victor</span> <span class="tweet__header-id">@mvictor</span>
                 <span class="tweet__header-id"> 
-                ${ item.date }
+                ${  formatData(item.date) }
                 </span>
                 <p class="tweet__descrpt">
-                ${item.text}
+                ${ item.text }
                 </p>  
         </div>
         </div>
         <div class="tweet__header-img">
-            ${imgSrcRender}
+            ${ imgSrcRender }
         </div>
         <div class="tweet__info-counts">
             <div class="tweet__info-content">
             <i class="fa-regular fa-comment" role="button"></i>
             <div class="count">
+            0
             </div>
         </div>
         <div class="tweet__info-content">
             <i class="fa-solid fa-retweet" role="button"></i>
             <div class="count">
+            0
             </div>
         </div>
         <div class="tweet__info-content">
             <i class="fa-regular fa-heart" role="button"></i>
             <div class="count">
+            0
             </div>
         </div>
         <div class="tweet__info-content">
             <i class="fa-regular fa-folder" role="button"></i>
             <div class="count">
+            0
             </div>
         </div>
         </div>
@@ -62,3 +69,36 @@ export function view(postContent: post[]) {
         `
     }).join('')
 }
+
+function formatData(date: Date) {
+
+    let datePost = date = new Date(date);
+    
+    moment.updateLocale('en', {
+        relativeTime : {
+            future: "in %s",
+            past:   "%s",
+            s  : '%ds',
+            ss : '%ds',
+            m:  "%dmin",
+            mm: "%dmin",
+            h:  "%dhours",
+            hh: "%dhours",
+            d:  "%ddays",
+            dd: "%ddays",
+            w:  "%dweeks",
+            ww: "%dweeks",
+            M:  "%dmonths",
+            MM: "%dmonths",
+            y:  "%dyears",
+            yy: "%dyears"
+        }
+    });
+
+    const start = moment(datePost)
+
+
+    return moment(start).fromNow();
+;
+}
+
