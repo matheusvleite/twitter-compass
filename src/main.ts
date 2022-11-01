@@ -5,6 +5,7 @@ import { feedNews } from './components/feed-news.js';
 import { footerNav } from './components/footer.js';
 import { view } from './components/view.js';
 import { post } from './components/interfaces/post.js';
+import { getLocal, updateLocalStorage } from './components/localstorage.js';
 
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -25,7 +26,6 @@ const form = document.querySelector<HTMLElement>('#form-tweet')!;
 const viewFeed = document.querySelector<HTMLDivElement>('#view')!;
 
 
-
 // VARIABLES
 
 const CLIENT_ID: string = '4ce2a6c0ddba9b6';
@@ -34,13 +34,6 @@ let postContent: post[] = [] = JSON.parse(getLocal()!) || [];
 
 // FUNCTIONS
 
-function getLocal() {
-    return localStorage.getItem('localDb');
-}
-
-function updateLocalStorage() {
-    localStorage.setItem('localDb', JSON.stringify(postContent));
-}
 
 function save(text: string, date: Date , url: string) {
 
@@ -50,7 +43,7 @@ function save(text: string, date: Date , url: string) {
     
     update();
 
-    updateLocalStorage();
+    updateLocalStorage(postContent);
 
 }
 
