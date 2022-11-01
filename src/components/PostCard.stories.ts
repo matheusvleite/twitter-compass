@@ -24,7 +24,7 @@ export const PostCards = () => {
     <img src="https://i.imgur.com/YPg97Ys.jpg" class="tweet-img" referrerpolicy="no-referrer">
     
     </div>
-    <div class="tweet__info-counts" width="600px">
+    <div class="tweet__info-counts">
         <div class="tweet__info-content">
         <i class="fa-regular fa-comment" role="button"></i>
         <div class="count">

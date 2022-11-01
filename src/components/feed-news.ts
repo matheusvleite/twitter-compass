@@ -12,7 +12,7 @@ export function feedNews(): string {
             <input type="text" name="Search" class="feed__news-search-input" placeholder="Search Twitter">
         </div>
         <div class="feed__news-notice">
-            <h2 class="feed__news-notice-title">What’s happening</h2>
+            <h1 class="feed__news-notice-title">What’s happening</h1>
             <div class="feed__news-card">
                 <div class="feed__news-card-content">
                     <span class="feed__news-descript">COVID19 - Last night</span>
@@ -52,7 +52,7 @@ export function feedNews(): string {
             </div>
         </div>
         <div class="feed__news-follow">
-            <h2 class="feed__news-notice-title">Who to follow</h2>
+            <h1 class="feed__news-notice-title">Who to follow</h1>
         <div class="feed__news-card-follow">    
             <div class="feed__news-card-follow-content">
                 <div class="feed__news-follow-area">
