@@ -21,7 +21,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
 const buttonFocus = document.querySelector<HTMLButtonElement>('.menu__side-btn')!; // BUTTON SIDEBAR MENU LEFT
 const textArea = document.querySelector<HTMLInputElement>('#tweet')!; // INPUT TEXTAREA
-const fileArea: HTMLInputElement | any = document.querySelector('#file-image'); // INPUT FILE
+const fileArea = document.querySelector<HTMLFormElement>('#file-image')!; // INPUT FILE
 const form = document.querySelector<HTMLElement>('#form-tweet')!;
 const viewFeed = document.querySelector<HTMLDivElement>('#view')!;
 
@@ -33,7 +33,6 @@ const CLIENT_ID: string = '4ce2a6c0ddba9b6';
 let postContent: post[] = [] = JSON.parse(getLocal()!) || [];
 
 // FUNCTIONS
-
 
 function save(text: string, date: Date , url: string) {
 
