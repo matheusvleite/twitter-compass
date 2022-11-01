@@ -24,6 +24,8 @@ const fileArea: HTMLInputElement | any = document.querySelector('#file-image'); 
 const form = document.querySelector<HTMLElement>('#form-tweet')!;
 const viewFeed = document.querySelector<HTMLDivElement>('#view')!;
 
+
+
 // VARIABLES
 
 const CLIENT_ID: string = '4ce2a6c0ddba9b6';
@@ -41,19 +43,28 @@ function updateLocalStorage() {
 }
 
 function save(text: string, date: Date , url: string) {
-    postContent.push({text, date, url})
+    postContent.push({text, date, url});
     
+    postContent.sort(function(a,b){
+        if(b.date < a.date) {
+            return -1;
+        }else {
+            return 1;
+        }
+    });
+
+    updateLocalStorage();
+
     view(postContent);
 
     update();
 
-    updateLocalStorage();
 }
 
 update();
 
 function update() {
-    let template = view(postContent)
+    let template = view(postContent);
     
     viewFeed.innerHTML = template;
 }

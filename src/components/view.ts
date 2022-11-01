@@ -4,6 +4,7 @@ import moment from 'moment'; // API MOMENT JS
 
 
 export function view(postContent: post[]) {
+
     return postContent.map(item => {
 
         let imgSource = `
@@ -13,14 +14,6 @@ export function view(postContent: post[]) {
         if(item.url != null) {
             imgSrcRender = imgSource;
         }; 
-
-        postContent.sort(function (a, b) {  // SORTING POSTS BY MOST RECENT TIME
-            if(a.date > b.date){
-                return -1
-            }else {
-                return 1;
-            }
-        });
 
         return  `
         <div class="tweet__card">
@@ -65,6 +58,7 @@ export function view(postContent: post[]) {
             </div>
         </div>
         </div>
+        <a href="/not-found.html" class="card__post-showmore">Show this thread</a>
         </div>
         `
     }).join('')

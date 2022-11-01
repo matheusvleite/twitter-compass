@@ -50,6 +50,17 @@
     margin-right: 20px;
 }
 
+.tweet__info-counts {
+    margin-bottom: 1.5rem;
+}
+
 .count {
     margin-left: .3rem;
+}
+
+.card__post-showmore {
+    text-decoration: none;
+    font-size: 13px;
+    color: var(--primary-blue);
+    margin-left: 1.5rem;
 }
