@@ -43,30 +43,26 @@ function updateLocalStorage() {
 }
 
 function save(text: string, date: Date , url: string) {
-    postContent.push({text, date, url});
+
+    postContent.unshift({text, date, url});
     
-    postContent.sort(function(a,b){
-        if(b.date < a.date) {
-            return -1;
-        }else {
-            return 1;
-        }
-    });
+    view(postContent);
+    
+    update();
 
     updateLocalStorage();
-
-    view(postContent);
-
-    update();
 
 }
 
 update();
 
+
 function update() {
+    
     let template = view(postContent);
     
     viewFeed.innerHTML = template;
+
 }
 
 function clearForm() { // CLEAR FORM
